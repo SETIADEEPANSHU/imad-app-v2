@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 var img=document.getElementById("madi");
-img.onclick=function()
+img.onclick = function()
 {
     alert("Hey");
 }
