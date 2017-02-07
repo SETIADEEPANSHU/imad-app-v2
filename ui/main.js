@@ -1,13 +1,10 @@
 console.log('Loaded!');
 
-var img=document.getElementById('madi');
-var marginLeft=0;
-function moveRight()
-{
-  marginLeft=marginLeft + 5;
-  img.style.marginLeft=marginLeft +'px';
-}
-img.onclick = function(){
+var but=document.getElementById('counter');
+var span=document.getElementById('count');
+var count=0;
+but.onclick = function(){
+  count=count+1;
+  span.innerHTML="New value";
     
-    var interval=setInterval(moveRight,100);
 };
