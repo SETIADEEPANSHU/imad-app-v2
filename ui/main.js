@@ -18,6 +18,9 @@ but.onclick = function(){
           }
       }
     };
+    
+    req.open('GET','http://setiadeepanshu.imad.hasura-app.io/counter',true);
+    req.send(null);
 
  
     
