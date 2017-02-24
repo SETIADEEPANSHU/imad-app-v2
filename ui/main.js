@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 var but=document.getElementById('counter');
-var span=document.getElementById('count');
+
 var count=0;
 but.onclick = function(){
     
@@ -14,6 +14,7 @@ but.onclick = function(){
           if(req.status == 200)
           {
               var count=req.responseText;
+              var span=document.getElementById('count');
                span.innerHTML=count.toString();
           }
       }
