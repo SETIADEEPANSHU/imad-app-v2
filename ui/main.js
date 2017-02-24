@@ -4,7 +4,21 @@ var but=document.getElementById('counter');
 var span=document.getElementById('count');
 var count=0;
 but.onclick = function(){
-  count=count+1;
-  span.innerHTML=count.toString();
+    
+    var req=new XMLHttpRequest();
+    
+    req.onreadystatechanged = function()
+    {
+      if(req.readyState == XMLHttpRequest.DONE)
+      {
+          if(req.status == 200)
+          {
+              var count=req.responseText;
+               span.innerHTML=count.toString();
+          }
+      }
+    };
+
+ 
     
 };
