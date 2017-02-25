@@ -57,7 +57,7 @@ button.onclick = function()
     
     
   var nameInput=document.getElementById('name');
-  var name=name.value;
+  var name=nameInput.value;
   
   
   
