@@ -62,7 +62,7 @@ button.onclick = function()
   
   
    req.open('GET','http://setiadeepanshu.imad.hasura-app.io/submit-name?name='+ name ,true);
-    req.send(null);
+   req.send(null);
   
   
 };
