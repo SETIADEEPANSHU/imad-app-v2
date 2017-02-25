@@ -28,7 +28,7 @@ but.onclick = function(){
 };
 
 var button=document.getElementById('submit');
-var names="";
+//var names="";
 
 button.onclick = function()
 {
@@ -41,7 +41,7 @@ button.onclick = function()
       {
           if(req.status == 200)
           {
-               names=req.responseTest;
+               var names=req.responseTest;
                names=JSON.parse(names);
                var nameList="";
                           for(var i=0;i<names.length;i++)
