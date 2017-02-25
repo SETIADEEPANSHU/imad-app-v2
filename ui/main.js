@@ -29,11 +29,12 @@ but.onclick = function(){
 
 var button=document.getElementById('submit');
 var names="";
-var nameList="";
+
 button.onclick = function()
 {
   var name=document.getElementById('name');
   names=['name1','name2','name3','name4'];
+  var nameList="";
   for(var i=0;i<names.length;i++)
   {
       nameList+="<li>"+names[i]+"</li>";
