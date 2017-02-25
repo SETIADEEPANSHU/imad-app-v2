@@ -33,15 +33,15 @@ var button=document.getElementById('submit');
 button.onclick = function()
 {
     
-    var req=new XMLHttpRequest();
+    var request=new XMLHttpRequest();
     
-    req.onreadystatechange = function()
+    request.onreadystatechange = function()
     {
-      if(req.readyState == XMLHttpRequest.DONE)
+      if(request.readyState == XMLHttpRequest.DONE)
       {
-          if(req.status == 200)
+          if(request.status == 200)
           {
-               var names=req.responseTest;
+               var names=request.responseTest;
                names=JSON.parse(names);
                var nameList="";
                           for(var i=0;i<names.length;i++)
@@ -61,8 +61,8 @@ button.onclick = function()
   
   
   
-   req.open('GET','http://setiadeepanshu.imad.hasura-app.io/submit-name?name='+ name ,true);
-   req.send(null);
+   request.open('GET','http://setiadeepanshu.imad.hasura-app.io/submit-name?name='+ name ,true);
+   request.send(null);
   
   
 };
