@@ -7,7 +7,7 @@ but.onclick = function(){
     
     var req=new XMLHttpRequest();
     
-    req.onreadystatechanged = function()
+    req.onreadystatechange = function()
     {
       if(req.readyState == XMLHttpRequest.DONE)
       {
