@@ -26,3 +26,18 @@ but.onclick = function(){
  
     
 };
+
+var button=getElementById('submit');
+var names="";
+button.onclick = function()
+{
+  var name=getElementById('name');
+  names=['nam1','name2','name3','name4'];
+  for(var i=0;i<names.length;i++)
+  {
+      nameList+="<li>"+names[i]+"</li>";
+  }
+  var ullist=getElementById('ullist');
+  ullist.innerHTML=nameList;
+  
+};
