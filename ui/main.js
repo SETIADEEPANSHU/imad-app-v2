@@ -32,14 +32,37 @@ var names="";
 
 button.onclick = function()
 {
-  var name=document.getElementById('name');
-  names=['name1','name2','name3','name4'];
-  var nameList="";
-  for(var i=0;i<names.length;i++)
-  {
-      nameList+="<li>"+names[i]+"</li>";
-  }
-  var ullist=document.getElementById('ullist');
-  ullist.innerHTML=nameList;
+    
+    var req=new XMLHttpRequest();
+    
+    req.onreadystatechange = function()
+    {
+      if(req.readyState == XMLHttpRequest.DONE)
+      {
+          if(req.status == 200)
+          {
+               names=req.responseTest;
+               names=JSON.parse(names);
+               var nameList="";
+                          for(var i=0;i<names.length;i++)
+                          {
+                            nameList+="<li>"+names[i]+"</li>";
+                          }
+                          var ullist=document.getElementById('ullist');
+                          ullist.innerHTML=nameList;
+          }
+      }
+    };
+    
+    
+    
+  var nameInput=document.getElementById('name');
+  var name=name.value;
+  
+  
+  
+   req.open('GET','http://setiadeepanshu.imad.hasura-app.io/submit-name?name='+ name ,true);
+    req.send(null);
+  
   
 };
