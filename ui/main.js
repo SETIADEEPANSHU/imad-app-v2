@@ -31,7 +31,7 @@ var button=document.getElementById('submit');
 var names="";
 button.onclick = function()
 {
-  var name=getElementById('name');
+  var name=document.getElementById('name');
   names=['nam1','name2','name3','name4'];
   for(var i=0;i<names.length;i++)
   {
