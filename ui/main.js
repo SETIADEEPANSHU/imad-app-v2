@@ -29,6 +29,7 @@ but.onclick = function(){
 
 var button=document.getElementById('submit');
 var names="";
+var nameList="";
 button.onclick = function()
 {
   var name=document.getElementById('name');
